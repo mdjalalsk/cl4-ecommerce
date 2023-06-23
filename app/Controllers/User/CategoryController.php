@@ -32,7 +32,6 @@ class CategoryController extends BaseController
     }
 
 
-
     public function showproduct($subcatid){
        
         $data = [];

@@ -70,7 +70,8 @@ $routes->get('admin/product/all', 'Admin\ProductController::index');
 // user subcategory
 // $routes->get('getsubcat/(:num)', 'User\SubcategoryController::subcat/$1');
 $routes->get('subcategory/(:num)', 'User\SubcategoryController::Products/$1');
-
+// user product 
+$routes->get('singleproduct/(:num)', 'User\ProductController::singleProduct/$1');
 //user category
 $routes->get('show/category', 'User\CategoryController::index');
 $routes->get('showsubcat/(:num)', 'User\CategoryController::showproduct/$1');

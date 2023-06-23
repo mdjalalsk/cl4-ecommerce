@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-</div>
+
 <!--carousel end -->
 
 <!--Card start -->
@@ -78,6 +78,6 @@
         
     </div>
     <!--Card end -->
-    
+    </div>
 
 <?= $this->endSection(); ?>

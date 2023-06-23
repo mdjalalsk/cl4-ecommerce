@@ -1,10 +1,10 @@
-
+/* sub  start style  */
 .subcat{
 display: flex;
 flex-direction:row;
 flex-wrap: wrap;
 }
-
+/* sub end style  */
 
 * { margin: 0;
     padding: 0;
@@ -61,134 +61,67 @@ img{ width: 100%;
     margin: auto;
 }
 
+.navbar-brand img{
+    width: 120px;
+}
 
-/* card css */
-:root{
-    --bodyBack : #ffeaed;
-    --textColor: #1b2741;
-    --starColor: #f67034;
-    --sectionBack: #f7f6f9;
-}
-.ccontainer-ct{
-    width: 80vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.header{
+
+/* single cart desing start  */
+.single-card{
+  
     width: 100%;
+    height: 100%;
+    margin-top: 10px;       
+    box-shadow: rgba(0, 0, 0, 14) 0px 3px 8px;
     text-align: center;
-}
-.header h1{
-font-size: 4em;
-text-transform: uppercase;
-color: var(--textColor);
-}
-.products-card{
-    width: 300px;
-    height: 500px;
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
+           
 }
-.product-img{
-    position: relative;
-    background-color: var(--sectionBack);
-    width: 200px;
+.single-card a{
+text-decoration: none;
+color: black;
+}
+
+
+.single-card-image {
+    width: 100%;
     height: 200px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 20px 40px;
-    border-radius: 10px;
-    transition: .3s;
-}
-.product:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-}
-.image{
-    width: 60%;
-    height: 40%;
-    display: grid;
-    place-items: center;
-    }
-    .image img{
-        width: 150px;
-    }
-    .namePrice{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .namePrice h3{
-        font-size: 2em;
-        text-transform: capitalize;
-        color: var(--textColor);
-    }
-    .namePrice span{
-        font-size: 1.5em;
-        color:var(--starColor);
-    }
-    .product p{
-        font-size: 18px;
-        line-height: 25px;
-    }
-    .stars svg{
-font-size: 1.3em;
-color: var(--starColor);
-    }
-    .bay{
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-    }
-    .bay button{
-        padding: 10px 20px;
-        border-radius: 7px;
-        border: none;
-        background-color:  var(--textColor);
-        color: var(--sectionBack);
-        font-size: 18px;
-        text-transform: capitalize;
-        cursor: pointer;
-        transition: .5s;
-
-    }
-    .bay button:hover{
-
-        transform:scale(1.1) ;
-    }
-
-/*
-=====================================
-        Card css
-=====================================
-*/
-/* .card{
-    width: 400px;
-    height: 400px;
     overflow: hidden;
-    padding: 10px;
-    border-radius: 5px solid transparent;    
-}
-.card-box{    
-    border-radius: 5px solid transparent;
-    transition: all 0.5s;
-   
-}
-.card-box-box{   
-    transform: scale(1.1)!important;   
+    object-fit: cover;  
 }
 
-.btcls{
-    margin-bottom: 20px;
+.single-card-image img {
+    transition: all .5s;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-fit: contain;
+    margin-top: 10px;
 }
-p{
-    text-align: center;
-    font-size: 16px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-} */
+
+.single-card-image img:hover { transform: scale(1.1) !important; }
+
+.single-card-content {
+    height: 190px;
+     
+}
+
+.single-card-content del{
+    color: red;
+ 
+}
+.single-card-content button {
+   
+    background-color: rgb(43, 112, 181);
+    padding: 7px 5px;
+    border-radius:10%;
+    border: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    align-items: center;        
+}
+.single-card-content button:hover { transform: scale(1.1); }
+
+/* single cart desing  end */

@@ -30,22 +30,23 @@ class ProductController extends BaseController
     }
 
 
-    public function Product()
+    public function singleProduct($pid)
     {
-        $cats = $this->db
-        ->table('images')
-        ->select('id,product_id,name')
-        ->get()->getResultArray();
+        // $cats = $this->db
+        // ->table('images')
+        // ->select('id,product_id,name')
+        // ->get()->getResultArray();
         $builder = $this->db->table('products');
         $builder->select('products.*,images.name as imagename,categories.name as catsname,subcategories.name as subcatsname');
-        $builder->join('images', 'images.product_id = products.id', 'inner');
-        $builder->join('categories', 'categories.id = products.category_id', 'inner');
-        $builder->join('subcategories', 'subcategories.id = products.subcategory_id', 'inner');
+        $builder->join('images', 'images.product_id = products.id', 'left');
+        $builder->join('categories', 'categories.id = products.category_id', 'left');
+        $builder->join('subcategories', 'subcategories.id = products.subcategory_id', 'left');
+        $builder->where('products.id', $pid);
         $data = $builder->get()->getResultArray();
         
 
-    dd($data);
+     //dd($data);
         
-        // return view('showsection/homepage',['data'=>$data]);
+         return view('showsection/singleproduct',['data'=>$data]);
     }
 }
