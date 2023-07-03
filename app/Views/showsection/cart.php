@@ -6,7 +6,7 @@
 <div class="container">
   <!-- cart start -->
 <main id="cart" style="max-width:calc(100% - 20px)">
-  <div class="back"><a href="index.php">&#11178; shop</a></div>
+  <div class="back"><a href="<?=base_url('/')?>">&#11178; CONTINUE SHOPPING</a></div>
   <h1>Your Cart</h1>
   <div class="container-fluid">
     <div class="row align-items-start">
@@ -102,13 +102,13 @@ $(document).ready(function () {
           <div class="col-3 mb-2">
             <img class="w-100" src="${i.image}" alt="art image">
           </div>
-          <div class="col-3 mb-2">
+          <div class="col-2 mb-2">
             <h6 class="">${i.name}</h6>            
           </div>
           <div class="col-2">            
-            <input type="number" value="1" class="quantity" size="4"/>            
+            <input type="number" value="1" class="qty" style="width:45px;"/>            
           </div>
-          <div class="col-2">
+          <div class="col-3">
             <p id="cartItem1Price">${i.price}</p>
           </div>
           <div class="col-2">
