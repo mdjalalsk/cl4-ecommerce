@@ -72,12 +72,15 @@ $routes->get('admin/product/all', 'Admin\ProductController::index');
 $routes->get('subcategory/(:num)', 'User\SubcategoryController::Products/$1');
 // user product 
 $routes->get('singleproduct/(:num)', 'User\ProductController::singleProduct/$1');
+
+
 //user category
 $routes->get('show/category', 'User\CategoryController::index');
 $routes->get('showsubcat/(:num)', 'User\CategoryController::showproduct/$1');
 
 
-
+// cart section 
+$routes->get('addtocart', 'User\CartController::index');
 
 
 /*

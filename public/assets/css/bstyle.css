@@ -15,8 +15,8 @@ ul{list-style: none;}
 body{ line-height: 1.5;
     font-family: 'Playfair', serif; }
 
-img{ width: 100%;
-     height: 100%; }
+/* img{ width: 100%;
+     height: 100%; } */
 
 /* login/register css */
 #login{
@@ -105,6 +105,9 @@ color: black;
     height: 190px;
      
 }
+.single-card-content p{
+ text-align: center;
+}
 
 .single-card-content del{
     color: red;
@@ -112,9 +115,10 @@ color: black;
 }
 .single-card-content button {
    
-    background-color: rgb(43, 112, 181);
+ background-color: rgb(43, 112, 181);
+   color: white;
     padding: 7px 5px;
-    border-radius:10%;
+    border-radius:15%;
     border: none;
     font-size: 14px;
     text-transform: capitalize;
@@ -122,6 +126,91 @@ color: black;
     transition: .5s;
     align-items: center;        
 }
-.single-card-content button:hover { transform: scale(1.1); }
+.single-card-content button:hover {
+    background-color: #3a1a3b;
+    transform: scale(1.1);
+ }
 
 /* single cart desing  end */
+
+
+
+/* single page style start  */
+
+
+.single-pro-img{
+    overflow:hidden;       
+}
+
+.single-pro-img img {
+    box-shadow: rgba(0, 0, 0, 24) 0px 3px 8px;
+    width: 400px;
+    height: 380px;
+    transition: all .5s;
+    margin-left: 20px;
+    padding-left: 50px;            
+}
+
+.single-pro-img img:hover {
+    transform: scale(1.1) !important;
+    
+}
+
+.single-small-img img {
+    width: 100px;
+    height: 100px;
+    transition: all .5s;
+    box-shadow: rgba(0, 0, 0, 24) 0px 3px 8px;
+    padding: 5px;
+    object-fit: cover;
+    object-fit: contain;
+    align-items: center;
+}
+.single-small-img {
+    display: flex;
+    overflow: hidden;
+    align-items: space-between;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.single-small-img img:hover {
+    transform: scale(1.1) !important;
+    padding: 5px
+}
+p{
+    text-align: justify;
+    font-size: 14px;        
+}
+
+.sigle-card-details del{
+    color: red;
+ 
+}
+
+/* sociali icon */
+.single-social-links {
+    display: flex;
+    justify-content:flex-start;
+}
+
+.single-social-links a{
+height: 40px;
+width: 40px;
+background-color: rgba(40, 36, 36, 0.2);
+margin: 0 10px 10px 0;
+text-align: center;
+line-height: 40px;
+border-radius:50%;
+color:  #e91e63;
+transform: all 0.5s ease;
+}
+
+.single-social-links a:hover {
+color: #24262b;
+background-color: #ffffff;
+}
+
+
+/* single page style end  */

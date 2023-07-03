@@ -29,6 +29,7 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   <button type="reset" class="btn btn-primary">reset</button>
+  <p>Already have an account?<?= anchor("login", "Login") ?></p>
 </form>
 </div>
 </div>

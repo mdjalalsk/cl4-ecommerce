@@ -42,7 +42,7 @@ class ProductController extends BaseController
         $builder->select('products.*, categories.name as catname, subcategories.name as subcatname');
         $builder->join('categories', 'categories.id = products.category_id', 'inner');
         $builder->join('subcategories', 'subcategories.id = products.subcategory_id', 'inner');
-        $data = $builder->get()->getResultArray();
+        $data = $builder->orderBy('id', 'ASC')->get()->getResultArray();
         return $this->respond($data, 200);
         // dd($data);
     }

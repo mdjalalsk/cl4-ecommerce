@@ -1,4 +1,4 @@
-
+<div class="container">
 <div class="footer">
             <div class="container">
                 <div class="row">
@@ -42,6 +42,29 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+        <script src="<?=base_url()?>/assets/js/cart.js"></script>
+      
+       <script>
+           
+     $(document).ready(function () {
+    const cart = new Cart();
+    $("#bcart").html(cart.totalItems());
+    $(".addCartBtn").click(function(){
+        $t = $(this);
+       let id = $t.data("id");
+       let price = $t.data("price");
+       let price2 = $t.data("price2");
+       let name = $t.parent().parent().find('.pname').html();
+       let img = $t.parent().parent().parent().find('.card-img-top').attr('src');
+       cart.addItem({ name: name, price: price,discount: price2, id:id, image:img  });
+       $("#bcart").html(cart.totalItems());
+ console.log(cart.totalItems());
+alert("Product "+ name + " has been added to cart");
+    });
+});
+        </script>
 </body>
 </html>
